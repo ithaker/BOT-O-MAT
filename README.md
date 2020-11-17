@@ -14,6 +14,10 @@ This project was coded in Python3 using Linux on a Raspberry Pi 4. The program a
 ## Issues
 The code runs within the localhost server and tunnels successfully to the alexa skills build; however, once called, ngrok displays a "500 internal server eroror."
 
+To-Do:
+- Add responsive tasks for the robots to do
+- Read out updated task list as tasks are completed
+
 ## Technologies
 Project is created with:
 * Flask
