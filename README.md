@@ -1,16 +1,64 @@
 # BOT-O-MAT
-Use any language to complete this challenge. The implementation is up to you: it can be a command-line application or have a graphical interface.
 
-Your application should collect a name and robot type from the types we list below. For each, it should create a Robot of the type the user chooses, e.g. Larry, Bipedal. 
+## Table of contents
+* [General Info](#general-info)
+* [Technologies](#technologies)
+* [Installation](#installation)
+* [Deployment](#deployment)
+* [Project Details](#project-details)
 
-Given the list of tasks below, your application should then assign the Robot a set of five tasks, all of which complete after a duration that we show in milliseconds. 
+## General info
+This project was coded in Python3 using Linux on a Raspberry Pi 4. The program aims to present the basic functionality of the Bot-o-Mat using Amazon Alexa. Ngrok allows the localhost server to be tunneled out and used as an endpoint by Amazon Alexa Skills. 
 
+## Technologies
+Project is created with:
+* Flask
+* Flask-ask
+* Ngrok
 
+## Setup w/ Flask-Ask
+### Pre-requisites
+- Python or Python3
+- Register for an [AWS Account](https://aws.amazon.com/)
+- Register for an [Amazon Developer Account](https://developer.amazon.com/)
 
-- Collect a name and robot type from user.
-- Instantiate a Robot of the type provided by the user with the name provided by the user
-  - for example: Bipedal, Larry
-- Set up methods on Robot to complete tasks from the provided list
+## Installation
+1. Clone the repository
+`$ git clone https://github.com/ithaker/BOT-O-MAT/`
+
+2. Install Flask
+`pip install flask`
+
+3. Install Flask-Ask
+`pip install flask-ask`
+
+4. Install [Ngrok](https://ngrok.com/) and follow the installation guide, extracting the zip file into the project folder
+
+## Deployment
+1. Within the alexa developer console, Create a Skill
+
+2. Title the skill as you would like
+
+3. Set up a Skill Invocation Name (the phrase that will start the project)
+
+4. Adding Intents
+The project is dependent on specific intents in order to operate. Thankfully, the alexa developer console has premade intents. Click "Add Intent" and activate the following:
+  - AMAZON.YesIntent
+  - AMAZON.NoIntent
+  - Custom "NameIntent"
+    - Within the Slot Type select "AMAZON.US_FIRST_NAME"
+  
+5. Tunneling
+  - run the program
+  - run ngrok `./ngrok http 5000`
+  - Under "Endpoint," paste the https Forwarding URL
+    - Add "/" to the end of the url depending on the extension specified in line 6
+    
+6. "Build" the skill and put the skill testing in "Development" mode
+
+7. Test the application within the developer console or on your Amazon Echo
+
+## Project Details
 
 ## Robot
 Robot completes tasks and removes them from the list when they are done (i.e. enough time has passed since starting the task).
@@ -66,14 +114,8 @@ Tasks have a description and an estimated time to complete.
 }
 ```
 
-## Features to add once the core functionality is complete
-Be creative and have fun! Use this list or create your own features.
-- Allow users to create multiple robots at one time
-- Create a leaderboard for tasks completed by each Robot
-- Create tasks specific for each robot type, this could work in conjunction with the leaderboard. For e.g. robots that are assigned tasks that their type can’t perform won’t get “credit” for finishing the task.
-- Add persistance for tasks, bots and leaderboard stats
-
 
 ## Authors
 - Scott Hoffman <https://github.com/scottshane>
 - Olivia Osby <https://github.com/oosby>
+- Ishan Thaker <https://github.com/ithaker>
