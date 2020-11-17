@@ -45,7 +45,7 @@ Project is created with:
 
 3. Set up a Skill Invocation Name (the phrase that will start the project)
 
-4. Adding Intents
+4. Adding Intents: 
 The project is dependent on specific intents in order to operate. Thankfully, the alexa developer console has premade intents. Click "Add Intent" and activate the following:
     - AMAZON.YesIntent
     - AMAZON.NoIntent
