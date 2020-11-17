@@ -43,15 +43,15 @@ Project is created with:
 
 4. Adding Intents
 The project is dependent on specific intents in order to operate. Thankfully, the alexa developer console has premade intents. Click "Add Intent" and activate the following:
-  - AMAZON.YesIntent
-  - AMAZON.NoIntent
-  - Custom "NameIntent"
+    - AMAZON.YesIntent
+    - AMAZON.NoIntent
+    - Custom "NameIntent"
     - Within the Slot Type select "AMAZON.US_FIRST_NAME"
   
 5. Tunneling
-  - run the program
-  - run ngrok `./ngrok http 5000`
-  - Under "Endpoint," paste the https Forwarding URL
+    - run the program
+    - run ngrok `./ngrok http 5000`
+    - Under "Endpoint," paste the https Forwarding URL
     - Add "/" to the end of the url depending on the extension specified in line 6
     
 6. "Build" the skill and put the skill testing in "Development" mode
