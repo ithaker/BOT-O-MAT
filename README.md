@@ -1,7 +1,8 @@
-# BOT-O-MAT
+# BOT-O-MAT for Alexa
 
 ## Table of contents
 * [General Info](#general-info)
+* [Issues](#issues)
 * [Technologies](#technologies)
 * [Installation](#installation)
 * [Deployment](#deployment)
@@ -9,6 +10,9 @@
 
 ## General info
 This project was coded in Python3 using Linux on a Raspberry Pi 4. The program aims to present the basic functionality of the Bot-o-Mat using Amazon Alexa. Ngrok allows the localhost server to be tunneled out and used as an endpoint by Amazon Alexa Skills. 
+
+## Issues
+The code runs within the localhost server and tunnels successfully to the alexa skills build; however, once called, ngrok displays a "500 internal server eroror."
 
 ## Technologies
 Project is created with:
