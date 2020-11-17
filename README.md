@@ -68,10 +68,10 @@ The project is dependent on specific intents in order to operate. Thankfully, th
 
 ## Project Details
 
-## Robot
+### Robot
 Robot completes tasks and removes them from the list when they are done (i.e. enough time has passed since starting the task).
 
-## Tasks
+### Tasks
 Tasks have a description and an estimated time to complete.
 
 ```
@@ -110,7 +110,7 @@ Tasks have a description and an estimated time to complete.
 ]
 ```
 
-## Types
+### Types
 ```
 { 
   UNIPEDAL: 'Unipedal',
